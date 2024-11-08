@@ -1,24 +1,19 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import InputLabel from "@mui/material/InputLabel";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import FacebookIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Copyright() {
     return (
         <Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
             {"Copyright © "}
-            <Link color="text.secondary" href="https://mui.com/">
-                Sitemark
+            <Link color="text.secondary" href="https:githubbb.vercel.app" target="_blank" nore>
+                tiagolimar
             </Link>
             &nbsp;
             {new Date().getFullYear()}
@@ -72,7 +67,7 @@ export default function Footer() {
                         <IconButton
                             color="inherit"
                             size="small"
-                            href="https://github.com/mui"
+                            href="https://github.com/tiagolimar"
                             aria-label="GitHub"
                             sx={{ alignSelf: "center" }}
                         >
@@ -81,16 +76,16 @@ export default function Footer() {
                         <IconButton
                             color="inherit"
                             size="small"
-                            href="https://x.com/MaterialUI"
-                            aria-label="X"
+                            href="https://www.instagram.com/tiago_limar/"
+                            aria-label="Instagram"
                             sx={{ alignSelf: "center" }}
                         >
-                            <TwitterIcon />
+                            <InstagramIcon />
                         </IconButton>
                         <IconButton
                             color="inherit"
                             size="small"
-                            href="https://www.linkedin.com/company/mui/"
+                            href="https://www.linkedin.com/in/tiago-limar"
                             aria-label="LinkedIn"
                             sx={{ alignSelf: "center" }}
                         >
