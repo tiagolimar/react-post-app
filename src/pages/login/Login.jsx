@@ -8,9 +8,8 @@ export const Login = () => {
   
 	const handleSubmit = (e) => {
 	  e.preventDefault();
-	  console.log('Usuário:', usuario);
-	  console.log('Senha:', senha);
-	  if (usuario === 'admin' && senha === 'admin') {
+	  if (senha === 'admin') {
+        localStorage.setItem('user', usuario);
 		location.href = '/home';
 	  }
 	};

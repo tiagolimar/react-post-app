@@ -24,7 +24,7 @@ export default function Table({data}) {
   })
 
   return (
-    <Box sx={{ height: 400, width: '100%' }}>
+    <Box sx={{ width: '75%', margin: 'auto auto' }}>
       <DataGrid
         rows={rows}
         columns={columns}

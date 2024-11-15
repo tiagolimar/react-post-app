@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {Home} from './pages/home/Home.jsx'
-import {Login} from './pages/login/Login.jsx'
-import {Post} from './pages/post/Post.jsx'
+import {Login} from './pages/login/Login.jsx';
 import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import { Layout } from './components/Layout.jsx';
+import { routes } from './routes/index.jsx';
 
 const router = createBrowserRouter([
     {
@@ -15,17 +15,13 @@ const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: "/home",
-        element: <Home />,
-    },
-    {
         path: "/login",
         element: <Login />,
     },
     {
-        path: "/post",
-        element: <Post />,
-    },
+        element: <Layout />,
+        children: routes,
+    }
 ]);
 
 createRoot(document.getElementById('root')).render(

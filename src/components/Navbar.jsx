@@ -14,7 +14,8 @@ import { Link } from 'react-router-dom';
 const pages = [
   { name: 'Home', path: '/home' },
   { name: 'Post', path: '/post' },
-  { name: 'Logout', path: '/login' }
+  { name: 'Contato', path: '/contato' },
+  { name: 'Logout', path: '/login' },
 ];
 
 const pageName = 'PostPage';
@@ -38,7 +39,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component={Link}
-            href="/home"
+            to="/home"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -117,7 +118,29 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+<Box sx={{display:"flex", gap:'1em', alignItems:'center'}}>
+<input list="pages" onChange={e=>location.href=e.target.value} placeholder='Navegar' style={{
+            padding: '0.75em', 
+            borderRadius: '0.5em', 
+            border:'none', 
+            outline:'none',
+            boxShadow: '0 0 0 0.2em #33333333',
+            }} />
+          <datalist id="pages">
+            {pages.map((page) => (
+                <option key={page.name} value={page.path}>{page.name}</option>
+            ))}
+          </datalist>
+          <Typography sx={{
+              mr: 2,
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.2rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}>{localStorage.getItem('user')}</Typography>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
